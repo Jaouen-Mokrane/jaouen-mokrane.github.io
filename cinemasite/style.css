@@ -1,0 +1,474 @@
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+h1{
+    font-weight: 500;
+    font-size: 51px;
+}
+h2{
+    font-weight: 500;
+    font-size:22.6px ;
+}
+h3{
+    font-weight: 500;
+    font-size:15px ;
+}
+p{
+    font-weight: 500;
+    font-size: 33px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+body{
+    margin: 24px 24px;
+    font-family: neue-haas-grotesk-display, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 10px;
+    background-color: black;
+    color: white;
+}
+
+.loader{
+    position: fixed;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    justify-self: center;
+    margin-top: 300Px;
+    margin-bottom: 100px;
+    border: 4px solid transparent;
+    width: 70px;
+    height: 70px;
+    border-top-color: black;
+    border-bottom-color: black ;
+    border-radius: 50%;
+    animation: charger 2s linear infinite;
+}
+@keyframes charger {
+    0%{
+        transform: rotate(0deg) ;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+    }
+    25%{
+        border-top-color: white;
+        border-bottom-color: white;
+    }
+    50%{
+        transform: rotate(360deg);
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+    }
+    75%{
+        border-top-color: white;
+        border-bottom-color: white;
+    }
+    100%{
+        transform: rotate(720deg);
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+    }
+}
+.fondu-out{
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
+}
+
+
+.header{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    grid-column: 1/13;
+    margin-bottom: 120px;
+}
+.headerdeux{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    grid-column: 1/13;
+    margin-bottom: 70px;
+}
+
+.titre{
+    grid-column: 1/3;
+}
+.menu {
+    grid-column: 3/4;
+    align-self: center;
+    justify-items: center;
+}
+.menu-icon{
+    margin-left: 12px;
+}
+.menu .menu-txt{
+    border:none;
+}
+
+.menu p{
+    font-size: 25px;
+    margin: 0px;
+    text-align: right;
+    align-self: center; 
+}
+.menu ul{
+    justify-self: start;
+    align-self: center;
+    margin:0;
+    padding: 0px;
+    line-height: 30px;
+}
+.menu li{
+    list-style-type: none;
+    float: right;
+    position: relative;
+}
+.menu ul li a{
+    color: white;
+    text-decoration: none;
+    width: 94px;
+    height: 30px;
+    display: block;
+    text-align: left;
+    border-bottom: 1px solid white;
+}
+.menu ul ul{
+    position: absolute;
+    top: 31px;
+    visibility: hidden;
+}
+.menu ul li:hover ul{
+    visibility: visible;
+}
+
+.scroll{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 10px;
+    grid-column: 1/13;
+    margin-bottom: 620px;
+}
+.scroll p{
+    grid-column: 1/10;
+    margin:0;
+}
+.scroll img{
+    grid-column: 1/span 8;
+    margin-bottom: 24px;
+}
+
+.scrolldeux{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 10px;
+    grid-column: 1/13;
+    margin-bottom: 20px;
+}
+.scrolldeux p{
+    grid-column: 1/10;
+    margin:0;
+}
+.scrolldeux img{
+    grid-column: 1/span 6;
+    margin-bottom: 24px;
+}
+
+.film{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 10px;
+    grid-column: 1/13;
+    margin-bottom: 220px;
+}
+.affiche{
+    grid-column:1/5;
+    margin-bottom: 100px;
+    max-width: 500px;
+}
+
+
+.titrefilm{
+    grid-column: 6/11;
+}
+.titrefilm h1{
+    margin: 0px;
+}
+.titrefilm h1{
+    grid-column: 6/11;
+    text-decoration: none;
+    position: relative;
+}
+
+.titrefilm h1::before{
+    content:'';
+    position:absolute;
+    background-color: white;
+    width: 140%;
+    height: 1px;
+    bottom: 125px;
+    transform-origin: 100% 0;
+    transform: scaleX(0);
+    transition: transform 0.4s;
+}
+.titrefilm h1:hover::before{
+    transform-origin:0 0;
+    transform: scaleX(1);
+}
+
+.titrefilmdeux{
+    grid-column: 6/11;
+}
+.titrefilmdeux h1{
+    margin: 0px;
+}
+.titrefilmdeux h1{
+    grid-column: 6/11;
+    text-decoration: none;
+    position: relative;
+}
+
+.titrefilmdeux h1::before{
+    content:'';
+    position:absolute;
+    background-color: white;
+    width: 140%;
+    height: 1px;
+    bottom: 220px;
+    transform-origin: 100% 0;
+    transform: scaleX(0);
+    transition: transform 0.4s;
+}
+.titrefilmdeux h1:hover::before{
+    transform-origin:0 0;
+    transform: scaleX(1);
+}
+
+
+
+
+
+.ouvrir{
+    grid-column: 12/span 1;
+    justify-self: end;
+}
+.ouvrir img{
+    margin-top: 20px;
+}
+.fermer{
+    grid-column: 12/span 1;
+    justify-self: end;
+    position: absolute;
+}
+.fermer img{
+    margin-top: 20px;
+}
+.horraire{
+    margin: 0px;
+    grid-column:6/span 3;
+}
+.description{
+    grid-column: 8/11;
+
+}
+.ytb{
+    grid-column: 11/13;
+    align-self: end;
+    justify-self: end;
+    grid-row: 1/2;
+    font-size: 17px;
+    margin-bottom: 100px;
+    text-decoration: none;
+    position: relative;
+}
+
+.ytb ::before{
+    content:'';
+    position:absolute;
+    background-color: white;
+    width: 100%;
+    height: 1px;
+    bottom: -5px;
+    transform-origin: 100% 0;
+    transform: scaleX(0);
+    transition: transform 0.4s;
+}
+.ytb :hover::before{
+    transform-origin:0 0;
+    transform: scaleX(1);
+}
+
+
+.synopsis{
+    grid-column: 1/8;
+}
+
+.achat{
+    grid-column: 1/13;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 10px;
+    margin-bottom: 320px;
+}
+
+.billet{
+    display: block;
+    grid-column: 6/span 2;
+    text-align: center;
+    justify-self: center;
+    background-color: white;
+    border-radius: 25px;
+    align-content: center;
+    align-items: center;
+    height: 50px;
+    line-height: 49px;
+    padding: 0 24px;
+}
+.billet a{
+    text-decoration: none;
+    color: black;
+}
+.billet h2{
+    margin:0px;
+}
+.prix{
+    grid-column: 6/span 3;
+}
+.warning{
+    grid-column: 6/span 3;
+}
+.merci{
+    grid-column: 2/11;
+    margin-bottom: 330px;
+}
+
+
+.p{
+    padding-bottom: 140px;
+}
+.info{
+    grid-column: 4/12;
+}
+.info a{
+    text-decoration: none;
+}
+.infodeux{
+    grid-column: 4/8;
+}
+.infotrois{
+    grid-column: 9/12;
+}
+
+.oxy{
+    display: block;
+    grid-column: 6/span 2;
+    text-align: center;
+    justify-self: center;
+    background-color: white;
+    border-radius: 25px;
+    align-content: center;
+    align-items: center;
+    height: 50px;
+    font-size: 22px;
+    line-height: 49px;
+    padding: 0 24px;
+}
+.oxy a{
+    text-decoration: none;
+    color: black;
+}
+.oxy h2{
+    margin:0px;
+}
+
+.footer{
+    margin-top: 96px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 10px;
+    grid-column: 1/13;
+
+}
+
+.footer a{
+    color: white;
+    text-decoration: none;
+}
+
+
+.footerplan{
+    grid-column: 1/span 2;
+    list-style-type: none;
+}
+
+.footerreseaux{
+    grid-column: 8/span 2;
+    list-style-type: none;
+}
+.footerreseaux p{
+    font-size: 16px;
+    margin: 0px;
+}
+
+.footercontact{
+    grid-column: 11/span 2;
+    list-style-type: none;
+}
+.footercontact p{
+    font-size: 16px;
+    margin: 0px;
+}
+
+.footerbas{
+    grid-column: 1/13;
+    border-top: 1px solid white;
+    margin-bottom: 11px;
+}
+.footerbas p{
+    font-size: 16px;
+    margin: 0px;
+}
+
+.footerlogo{
+    grid-column: 1/span 3;
+}
+.footercredit{
+    grid-column: 5/span 4;
+    list-style-type: none; 
+}
+.footercredit p{
+    font-size: 16px;
+    margin: 0px;
+}
+.footerlegal{
+    grid-column: 11/span 2;
+    list-style-type: none; 
+}
+.footerlegal p{
+    font-size: 16px;
+    margin: 0px;
+}
+
+@media only screen and (min-width: 1280px) {
+    body {
+        margin: 24px 2%;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    body {
+        margin: 24px 10%;
+    }
+}
